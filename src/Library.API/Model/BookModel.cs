@@ -26,6 +26,6 @@ namespace Library.API.Model
 
         public string Comment { get; set; }
 
-        public DateTime ReturningDate { get; set; }
+        public DateTime? ReturningDate { get; set; }
     }
 }

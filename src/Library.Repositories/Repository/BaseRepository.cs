@@ -40,7 +40,37 @@ namespace Library.Repository.Repository
                     BorrowedBy = "Edmar Junior",
                     Comment = "He said he will return it to me without any scratches",
                     ReturningDate = DateTime.UtcNow.AddDays(5)
-                }
+                },
+                new Book
+                {
+                    Id = 3,
+                    Isbn = "9780345538",
+                    Authors = new List<string>{"J. R. R. Tolkien"},
+                    Title = "The Lord of the Rings",
+                    Genre = "Fiction",
+                    IsBorrowed = false
+                },
+                new Book
+                {
+                    Id = 4,
+                    Isbn = "838845915p",
+                    Authors = new List<string>{"Stephen King"},
+                    Title = "The Institute: A Novel",
+                    Genre = "Romance",
+                    IsBorrowed = true,
+                    BorrowedBy = "John Smith",
+                    Comment = "He is my friend",
+                    ReturningDate = DateTime.UtcNow.AddDays(5)
+                },
+                new Book
+                {
+                    Id = 5,
+                    Isbn = "1250104211",
+                    Authors = new List<string>{"Watt Key"},
+                    Title = "Terror at Bottle Creek",
+                    Genre = "Terror",
+                    IsBorrowed = false
+                },
             }.AsQueryable();
         }
 

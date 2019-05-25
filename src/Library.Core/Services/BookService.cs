@@ -35,6 +35,12 @@ namespace Library.Core.Services
 
         public async Task<int> Create(Book book)
         {
+            var books = await _repository.GetAll();
+            if (books.Any(b => b.Isbn == book.Isbn))
+            {
+                throw new ArrayTypeMismatchException(nameof(book));
+            }
+
             var id = await _repository.Create(book);
             return id;
         }

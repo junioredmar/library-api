@@ -27,7 +27,7 @@ namespace Library.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            services.AddCors();
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new Info
@@ -79,6 +79,10 @@ namespace Library.API
 
             app.UseHttpsRedirection();
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));
+            app.UseCors(
+                options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+            );
+
             app.UseMvc();
         }
     }

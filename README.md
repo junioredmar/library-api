@@ -1,4 +1,6 @@
 # How to run
+- Make sure you have installed .NET Core 2.2 SDK
+
 ### via Visual Studio
 1. Press "Start" and wait for the swagger to be opened in your browser with all available endpoints
 ### via CLI

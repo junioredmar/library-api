@@ -21,7 +21,7 @@ namespace Library.Core.Entities
 
         public string Comment { get; set; }
 
-        public DateTime ReturningDate { get; set; }
+        public DateTime? ReturningDate { get; set; }
 
     }
 }
